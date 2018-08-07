@@ -48,13 +48,7 @@ var quotes = [
 		episode: 1
 	}
 ];
-
 // Create the getRandomQuote function and name it getRandomQuote
-
-/* 
-getRandomQuote selects a random object based on the length property of the quotes array and assigns the object to the variable randomQuote. 
-*/
-
 function getRandomQuote(quotes) {
 	let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 	return randomQuote;
@@ -62,6 +56,15 @@ function getRandomQuote(quotes) {
 
 // a random object is being returned and logged to the console.
 // console.log(getRandomQuote(quotes));
+
+// Random background color generator called in printQuote function
+function backgroundColor() {
+	var r = Math.floor(Math.random() * 256);
+	var g = Math.floor(Math.random() * 256);
+	var b = Math.floor(Math.random() * 256);
+	rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+	document.body.style.backgroundColor = rgbColor;
+}
 
 // Create the printQuote funtion and name it printQuote.
 function printQuote() {
