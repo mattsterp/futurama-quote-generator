@@ -6,7 +6,7 @@
 The quotes array holds the quote objects.  Each object contains two additional categories: season, and episode.  The quotes are from the TV show Futurama.
 */
 
-const quotes = [
+var quotes = [
 	{
 		quote: 'Gimmie your biggest, strongest, cheapest drink.',
 		source: 'Bender',
@@ -59,13 +59,37 @@ function getRandomQuote(quotes) {
 	let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 	return randomQuote;
 }
+
 // a random object is being returned and logged to the console.
-console.log(getRandomQuote(quotes));
+// console.log(getRandomQuote(quotes));
 
-// alert(getRandomQuote.randomQuote);
-
-// Create the printQuote funtion and name it printQuote
+// Create the printQuote funtion and name it printQuote.
+function printQuote() {
+	var randomQuote = getRandomQuote(quotes);
+	var selectedQuoteString = '<p class="quote">' + randomQuote.quote + '</p>';
+	selectedQuoteString += '<p class="source">' + randomQuote.source;
+	// evaluate quote object for citation property
+	if (randomQuote.citation) {
+		selectedQuoteString += '<span class="citation">' + randomQuote.citation + '</span>';
+	}
+	// evaluate quote object for year property
+	if (randomQuote.year) {
+		selectedQuoteString += '<span class="year">' + randomQuote.year + '</span>';
+	}
+	// evaluate quote object for season property extra credit
+	if (randomQuote.season) {
+		selectedQuoteString += '<span class="season"> Season ,' + randomQuote.season + '</span>';
+	}
+	// evaluate quote object for episode property extra credit
+	if (randomQuote.episode) {
+		selectedQuoteString += '<span class="episode"> Episode ,' + randomQuote.episode + '</span>';
+	}
+	// appends the closing <p> tag to the string
+	selectedQuoteString += '</p>';
+	document.getElementById('quote-box').innerHTML = selectedQuoteString;
+	backgroundColor();
+}
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-// document.getElementById('loadQuote').addEventListener('click', printQuote, false);
+document.getElementById('loadQuote').addEventListener('click', printQuote, false);
