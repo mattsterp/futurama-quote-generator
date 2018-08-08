@@ -43,7 +43,7 @@ var quotes = [
 	}
 ];
 
-// returns a random quote object
+// returns a random quote object to be called in the printQuote function
 function getRandomQuote(quotes) {
 	let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 	return randomQuote;
@@ -58,7 +58,8 @@ function backgroundColor() {
 	document.body.style.backgroundColor = rgbColor;
 }
 
-// Create the printQuote funtion and name it printQuote.
+// The printQuote funtion calls getRandomQuote and return randomQuote to selectedQuoteString to concatinate the output.
+
 function printQuote() {
 	var randomQuote = getRandomQuote(quotes);
 	var selectedQuoteString = '<p class="quote">' + randomQuote.quote + '</p>';
