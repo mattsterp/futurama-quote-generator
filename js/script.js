@@ -10,7 +10,7 @@ var quotes = [
 		episode: 1
 	},
 	{
-		quote: 'Wait, I’m having one of those things. You know a headache with pictures',
+		quote: 'Wait, I’m having one of those things. You know a headache with pictures.',
 		source: 'Fry',
 		citation: 'A Taste of Freedom, Season 5 Episode 4',
 		year: 2002,
@@ -18,7 +18,7 @@ var quotes = [
 		episode: 4
 	},
 	{
-		quote: 'I really ought to do something, but I am already in my pajamas',
+		quote: 'I really ought to do something, but I am already in my pajamas.',
 		source: 'Professor Farnsworth',
 		citation: 'The Series Has Landed',
 		year: 1999,
