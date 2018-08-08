@@ -1,11 +1,5 @@
-// FSJS - Random Quote Generator
-
-// Create the array of quote objects and name it quotes
-
-/*
-The quotes array holds the quote objects.  Each object contains two additional categories: season, and episode.  The quotes are from the TV show Futurama.
-*/
-
+// Treehouse FSJS - Random Quote Generator
+// The quotes are from th TV series Futuama
 var quotes = [
 	{
 		quote: 'Gimmie your biggest, strongest, cheapest drink.',
@@ -48,14 +42,12 @@ var quotes = [
 		episode: 1
 	}
 ];
-// Create the getRandomQuote function and name it getRandomQuote
+
+// returns a random quote object
 function getRandomQuote(quotes) {
 	let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 	return randomQuote;
 }
-
-// a random object is being returned and logged to the console.
-// console.log(getRandomQuote(quotes));
 
 // Random background color generator called in printQuote function
 function backgroundColor() {
@@ -93,7 +85,7 @@ function printQuote() {
 	backgroundColor();
 }
 // setTimeout runs printQuote
-setInterval(printQuote, 7000);
+setInterval(printQuote, 10000);
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener('click', printQuote, false);
