@@ -84,7 +84,7 @@ function printQuote() {
 	document.getElementById('quote-box').innerHTML = selectedQuoteString;
 	backgroundColor();
 }
-// setTimeout runs printQuote
+// setInterval runs printQuote
 setInterval(printQuote, 10000);
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
