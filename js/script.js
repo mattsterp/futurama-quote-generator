@@ -1,5 +1,5 @@
 // Treehouse FSJS - Random Quote Generator
-// The quotes are from th TV series Futuama
+// The quotes are from th TV series Futuama.  I have added two aditional categroies for extra credit season,and episode.
 var quotes = [
 	{
 		quote: 'Gimmie your biggest, strongest, cheapest drink.',
