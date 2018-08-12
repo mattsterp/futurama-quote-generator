@@ -74,11 +74,11 @@ function printQuote() {
 	}
 	// evaluate quote object for season property extra credit
 	if (randomQuote.season) {
-		selectedQuoteString += '<span class="season"> Season ,' + randomQuote.season + '</span>';
+		selectedQuoteString += '<span class="season"> Season ' + randomQuote.season + ',' + '</span>';
 	}
 	// evaluate quote object for episode property extra credit
 	if (randomQuote.episode) {
-		selectedQuoteString += '<span class="episode"> Episode ,' + randomQuote.episode + '</span>';
+		selectedQuoteString += '<span class="episode"> Episode ' + randomQuote.episode + '</span>';
 	}
 	// appends the closing <p> tag to the string
 	selectedQuoteString += '</p>';
